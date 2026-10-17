@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+    <style>
+        body{ font-family: Arial; text-align: center; padding: 30px; background: #f4f4f4; }
+        input{ padding: 10px; width: 200px; margin: 5px; border-radius: 5px; border: 1px solid #ccc; }
+        button{ padding: 10px 15px; margin: 5px; font-size: 18px; cursor: pointer; background: #00796b; color: white; border: none; border-radius: 5px; }
+        button:hover{ background: #004d40; }
+        #result{ color: #004d40; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <input type="number" id="num1" placeholder="Enter first number">
+    <br><br>
+    <input type="number" id="num2" placeholder="Enter second number">
+    <br><br>
+
+    <button onclick="calculate('+')">+</button>
+    <button onclick="calculate('-')">-</button>
+    <button onclick="calculate('*')">*</button>
+    <button onclick="calculate('/')">/</button>
+
+    <h2 id="result">Result: </h2>
+
+    <script>
+        function calculate(operator){
+            let number1 = parseFloat(document.getElementById("num1").value);
+            let number2 = parseFloat(document.getElementById("num2").value);
+
+            if(isNaN(number1) || isNaN(number2)){
+                alert("Please enter both numbers");
+                return;
+            }
+
+            let ans;
+            if(operator == '+'){
+                ans = number1 + number2;
+            }
+            else if(operator == '-'){
+                ans = number1 - number2;
+            }
+            else if(operator == '*'){
+                ans = number1 * number2;
+            }
+            else if(operator == '/'){
+                if(number2 == 0){
+                    alert("Cannot divide by zero");
+                    return;
+                }
+                ans = number1 / number2;
+            }
+            else{
+                ans = "invalid";
+            }
+
+            document.getElementById("result").innerText = "Result: " + ans;
+        }
+    </script>
+</body>
+</html>
