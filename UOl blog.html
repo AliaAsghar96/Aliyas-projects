@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>UL BLOG</title>
+     <style>
+        *{ margin: 0; padding: 0; box-sizing: border-box; }
+        body{ font-family: Arial; background-color: #f4f4f4; color: #333; }
+
+        header{ 
+            background:conic-gradient(from 45deg,#fa900f93,#0c95507f);
+            padding: 40px 30px;
+            display: flex;
+            align-items: center;
+            gap: 70px;
+            text-align: center;
+        }
+        header img{ width: 150px; height: 150px; border-radius: 50%; object-fit: cover; }
+        
+        .articles-container{ display:grid; grid-template-columns: 1fr 1fr;
+             gap: 20px; margin: 20px; }
+        .blog-card{ background-color: white; padding: 100px; border-radius: 8px;
+             box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+
+        .quick-links{ background-color: #e0f2f1; padding: 20px; border-radius: 8px;
+             margin: 0 20px 20px 20px; border: 1px solid #b2dfdb; text-align: center; }
+        .quick-links h3 { margin-bottom: 15px; color: #004d40; }
+        .quick-links ul{ list-style: none; display:flex; justify-content: center;
+             gap:20px; flex-wrap: wrap; } 
+        .quick-links a { color: #00796b; text-decoration: none; font-weight: bold; }
+        .quick-links a:hover{ text-decoration: underline; }
+
+        nav{ margin-top: 8px; }
+        nav a{ text-decoration: none; color: #fff; margin:0 12px; font-weight: bold; }
+        nav a:hover{ color:blue; }
+
+        /* Footer Styling */
+        .main-footer{ background: #00796b; color: white; padding: 30px 20px 10px 20px; 
+            display: flex; flex-wrap: wrap; gap: 30px;
+             justify-content: space-between; }
+        .footer-box{ flex: 1; min-width: 250px; }
+        .footer-box h3{ margin-bottom: 10px; border-left: 
+            4px solid #80cbc4; padding-left: 10px; }
+        .footer-box p{ margin: 6px 0; }
+        .footer-box span{ font-weight: bold; color: #b2dfdb; }
+        .footer-box input, .footer-box textarea{ width: 100%; padding: 8px;
+            
+            margin: 5px 0; border-radius: 5px; border: none; }
+        .footer-box button{ background: #004d40; color: white;
+             padding: 8px 20px; border: none; border-radius: 5px;
+              cursor: pointer; margin-top: 5px; }
+        .footer-box button:hover{ background: #00251a; }
+        .footer-bottom{ width: 100%; text-align: center; margin-top: 20px;
+             padding-top: 15px; border-top: 1px solid #00695c; }
+     </style>
+</head>
+<body>
+    <header>
+        <img src="alia.jpg" alt="alia">
+        <div>
+            <h1>University of Layyah Blog</h1>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+    </header>
+      
+    <main class="articles-container">
+        <article class="blog-card">
+            <h2>Latest events at University of Layyah</h2>
+            <p>Seminars, Sports week, Cultural festivals and departmental activities</p>
+        </article>
+        <article class="blog-card">
+            <h2>Admission updates and other information</h2>
+            <p>Student admission dates and deadlines. Information about results.</p>
+        </article>
+    </main>
+
+    <section class="quick-links">
+        <h3>Quick Links</h3>
+        <ul>
+            <li><a href="#">Student Portal</a></li>
+            <li><a href="#">Admissions Details</a></li>
+            <li><a href="#">Departments</a></li>
+            <li><a href="#">Admission info</a></li>
+            <li><a href="#">Campus map</a></li>
+        </ul>
+    </section>     
+ 
+    <footer class="main-footer">
+        <div class="footer-box">
+            <h3>Basic Info</h3>
+            <h2>University of Layyah</h2>
+            <p><span>Location:</span> Layyah, Punjab, Pakistan</p>
+            <p><span>Email:</span> uol@edu.pk</p>
+            <p><span>Phone:</span> 03276608661</p>
+        </div>
+        <div class="footer-box">
+            <h3>Contact Us</h3>
+            <input type="text" placeholder="Enter your name">
+            <input type="email" placeholder="Enter your email">
+            <textarea rows="3" placeholder="Your message"></textarea><br>
+            <button type="button">Submit</button>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 University of Layyah. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
